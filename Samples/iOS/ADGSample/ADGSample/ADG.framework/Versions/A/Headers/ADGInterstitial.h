@@ -1,6 +1,6 @@
 #import "ADGManagerViewController.h"
 
-@interface ADGInterstitial : NSObject<ADGManagerViewControllerDelegate> {
+@interface ADGInterstitial : NSObject <ADGManagerViewControllerDelegate> {
 }
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, assign) UIViewController *rootViewController;
@@ -23,12 +23,16 @@
 - (void)setSpan:(int)span isPercentage:(BOOL)isPercentage;
 - (void)removeBackgroundTapGesture;
 
-- (void)setLocationId:(NSString*)locationId;
+- (void)setLocationId:(NSString *)locationId;
 - (void)setAdType:(ADGAdType)adType;
-- (void)setAdBackGroundColor:(UIColor*)color;
+- (void)setAdBackGroundColor:(UIColor *)color;
 - (void)setAdScale:(double)scale;
 - (void)setMiddleware:(ADGMiddleware)middleware;
 - (void)setPreventAccidentClick:(BOOL)preventAccidentClick;
+- (void)setLat:(double)lat;
+- (void)setLon:(double)lon;
+- (void)setEnableSound:(BOOL)enableSound;
+- (void)setEnableTestMode:(BOOL)isTest;
 
 - (void)preload;
 - (BOOL)show;
@@ -39,4 +43,3 @@
 @optional
 - (void)ADGInterstitialClose;
 @end
-
